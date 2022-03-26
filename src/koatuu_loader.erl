@@ -1,6 +1,5 @@
 -module (koatuu_loader).
 -include("koatuu.hrl").
--include("dict.hrl").
 -include_lib("kvs/include/cursors.hrl").
 -export ([boot/0]).
 

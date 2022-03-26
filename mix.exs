@@ -1,9 +1,16 @@
 defmodule KOATUU.Mixfile do
   use Mix.Project
-  def application(), do: [mod: {:koatuu, []}, applications: [:logger,:rocksdb,:kvs]]
+
+  def application(),
+    do: [
+      mod: {:koatuu, []},
+      applications: [:rocksdb, :kvs],
+      extra_applications: [:logger]
+    ]
+
   def deps() do
     [
-      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev, override: true},
       {:rocksdb, "~> 1.6.0"},
       {:jsone, "~> 1.5.1"},
       {:kvs, "~> 8.12.0"}
@@ -22,9 +29,8 @@ defmodule KOATUU.Mixfile do
 
   def package do
     [
-      files: ~w(priv include lib src mix.exs LICENSE),
+      files: ~w(priv include src mix.exs LICENSE),
       licenses: ["ISC"],
-      name: :koatuu,
       maintainers: ["Namdak Tonpa"],
       links: %{"GitHub" => "https://github.com/erpuno/koatuu"}
     ]

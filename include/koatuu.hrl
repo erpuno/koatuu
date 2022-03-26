@@ -1,7 +1,9 @@
 -ifndef(KOATUU_HRL).
 -define(KOATUU_HRL, true).
 
--include("dict.hrl").
+-record(dict, { id = [] :: list(),
+                type = [] :: binary(),
+                name = [] :: binary() | list()}).
 
 -record (locality, {id,
                     koatuu_id=[],

@@ -1,7 +1,7 @@
 {application, koatuu,
  [
   {description, "KOATUU Ukrainian Classifier"},
-  {vsn, "0.11.0"},
+  {vsn, "1.3.27"},
   {registered, []},
   {applications, [kernel,stdlib,logger,rocksdb,jsone,kvs]},
   {mod, { koatuu, []}},

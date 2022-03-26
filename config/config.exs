@@ -23,4 +23,3 @@ config :koatuu,
           }}
      }}
   ]
-
