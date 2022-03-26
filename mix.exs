@@ -1,12 +1,19 @@
 defmodule KOATUU.Mixfile do
   use Mix.Project
-  def deps(), do: [{:ex_doc, ">= 0.0.0", only: :dev}]
-  def application(), do: [mod: {:koatuu, []}, applications: []]
+  def application(), do: [mod: {:koatuu, []}, applications: [:logger,:rocksdb,:kvs]]
+  def deps() do
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:rocksdb, "~> 1.6.0"},
+      {:jsone, "~> 1.5.1"},
+      {:kvs, "~> 8.12.0"}
+    ]
+  end
 
   def project() do
     [
       app: :koatuu,
-      version: "0.11.0",
+      version: "1.3.27",
       description: "KOATUU Ukrainian Classifier",
       package: package(),
       deps: deps()
@@ -15,7 +22,7 @@ defmodule KOATUU.Mixfile do
 
   def package do
     [
-      files: ~w(priv lib src mix.exs LICENSE),
+      files: ~w(priv include lib src mix.exs LICENSE),
       licenses: ["ISC"],
       name: :koatuu,
       maintainers: ["Namdak Tonpa"],
