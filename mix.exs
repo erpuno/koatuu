@@ -20,7 +20,7 @@ defmodule KOATUU.Mixfile do
   def project() do
     [
       app: :koatuu,
-      version: "1.4.0",
+      version: "1.4.1",
       description: "KOATUU Ukrainian Classifier",
       package: package(),
       deps: deps()
