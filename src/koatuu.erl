@@ -11,6 +11,6 @@ stop(_) -> ok.
 init([]) -> {ok, {{one_for_one, 5, 10}, []}}.
 start(_, _) ->
     logger:add_handlers(koatuu),
-    kvs:join([], #kvs{mod = kvs_rocks, db = "koatuu"}),
+    kvs:join([], #kvs{mod = kvs_rocks, db = "rocksdb"}),
     spawn(fun () -> koatuu_loader:boot() end),
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).

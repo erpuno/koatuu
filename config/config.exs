@@ -2,7 +2,6 @@ use Mix.Config
 
 config :kvs,
   dba: :kvs_rocks,
-  db: 'koatuu',
   dba_st: :kvs_st,
   schema: [:kvs, :kvs_stream]
 
