@@ -13,14 +13,14 @@ defmodule KOATUU.Mixfile do
       {:ex_doc, "~> 0.19", only: :dev, override: true},
       {:rocksdb, "~> 1.6.0"},
       {:jsone, "~> 1.5.1"},
-      {:kvs, "~> 8.12.0"}
+      {:kvs, "~> 9.4.1"}
     ]
   end
 
   def project() do
     [
       app: :koatuu,
-      version: "1.3.27",
+      version: "1.4.0",
       description: "KOATUU Ukrainian Classifier",
       package: package(),
       deps: deps()
